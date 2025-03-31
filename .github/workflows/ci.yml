@@ -9,16 +9,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+<<<<<<< HEAD
+=======
 
+>>>>>>> 131b86b9 (Fix GitHub Actions path issue)
     - name: Use Node.js 14.x
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
-
+<<<<<<< HEAD
     - name: Install Dependencies
-      working-directory: worksheet2/my-react-app
-      run: npm install
-
+      run: |
+        cd my-react-app && npm install
     - name: Run Tests
-      working-directory: worksheet2/my-react-app
-      run: npm test -- --watchAll=false
+      run: |
+        cd my-react-app && npm test -- --watchAll=false
+=======
+
+    -     - name: Install Dependencies
+      run: npm ci
+    - name: Run Tests
+      run: npm test
