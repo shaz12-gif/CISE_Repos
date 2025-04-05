@@ -13,7 +13,7 @@ on:
 jobs:
   Test:
     if: github.event.pull_request.merged == true
-    uses: YOUR_USERNAME/YOUR_REPO/.github/workflows/test.yml@develop
+    uses: shaz12-gif/CISE_Repos/.github/workflows/test.yml@develop
 
   Deploy-Production:
     if: github.event.pull_request.merged == true
